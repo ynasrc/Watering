@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 5px solid #f5e6ff;
+  background: #9900FF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8) inset;
+}
+.container h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+.container .form-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.container .form-box .form-input {
+  padding-inline: 0.5rem;
+  padding-block: 0.3rem;
+  color: #FFF;
+  border-radius: 1rem;
+  border: 3px solid #f5e6ff;
+  outline: none;
+  background-color: transparent;
+  font-weight: bolder;
+}
+.container .form-box .form-label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  padding-inline: 0.5rem;
+  background-color: #9900FF;
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  transform: translateY(-50%);
+  transition: 0.2s ease-in;
+}
+.container .form-box .form-input:focus ~ .form-label,
+.container .form-box .form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
+  top: 0px;
+  left: 10px;
+  padding-inline: 0.3rem;
+  font-size: 0.75rem;
+}
+.container button {
+  position: relative;
+  z-index: 0;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  border: none;
+  color: #9900FF;
+  font-weight: bolder;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  transform: scale(1);
+  transition: text-shadow 0.1s, transform 0.1s;
+}
+.container button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgba(153, 0, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.container button:active::after, .container button:active {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4) inset;
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.result-container {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+}
+.result-container .result-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 5px solid #f5e6ff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8) inset;
+  background-color: #9900FF;
+}
+.result-container .result-box p {
+  margin-bottom: 0.5rem;
+}
+.result-container .result-box .result {
+  font-size: 4rem;
+  margin: 0;
+}
+.result-container .result-box button {
+  width: 100%;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  color: #9900FF;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.alert-container {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.5176470588);
+}
+
+.alert-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 5px solid #f5e6ff;
+  background-color: #9900FF;
+}
+.alert-box p {
+  text-align: center;
+}
+.alert-box hr {
+  width: 40%;
+  border: 1px dashed #FFF;
+}
+.alert-box button {
+  width: 100%;
+  color: #9900FF;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */

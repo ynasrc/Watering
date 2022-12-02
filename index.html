@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watering</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/1012a5df2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="container" class="container">
+        <h3>Watering</h3>
+
+        <div class="form-box">
+            <input id="idade" type="number" autocomplete="off" class="form-input" placeholder=" ">
+            <span class="form-label">Idade</span>
+        </div>
+
+        <div class="form-box">
+            <input id="peso" type="number" autocomplete="off" class="form-input" placeholder=" ">
+            <span class="form-label">Peso</span>
+        </div>
+
+        <button onclick="submit()" type="submit">Submit</button>
+    </div>
+    
+    <div id="result-container" class="result-container">
+        <div class="result-box">
+            <p>Você deve consumir, em média...</p>
+            <p id="result" class="result">2L</p>
+            <p>por dia.</p>
+
+            <button onclick="back(this)" type="reset">Back</button>
+            <button onclick="reset()" type="reset">Reset</button>
+        </div>
+    </div>
+
+    <div id="alert-container" class="alert-container">
+        <div id="alert-box" class="alert-box">
+            <p>Campos devem estar preenchidos <br> com valores diferentes de 0!</p>
+            <hr>
+            <button onclick="back(this)">Back</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
